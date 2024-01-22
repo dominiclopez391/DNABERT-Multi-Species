@@ -1,0 +1,36 @@
+11/17/2023 11:31:18 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+dna-genome-classification
+cola
+mnli
+mnli-mm
+mrpc
+sst-2
+sts-b
+qqp
+qnli
+rte
+wnli
+dnaprom
+dna690
+dnapair
+dnasplice
+dna-genome-classification
+Traceback (most recent call last):
+  File "/home/015861469/DNABERT-genome-classification/src/transformers/configuration_utils.py", line 221, in get_config_dict
+    resume_download=resume_download,
+  File "/home/015861469/DNABERT-genome-classification/src/transformers/file_utils.py", line 259, in cached_path
+    raise EnvironmentError("file {} not found".format(url_or_filename))
+OSError: file /home/015861469/output6/config.json not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run_finetune.py", line 1289, in <module>
+    main()
+  File "run_finetune.py", line 1068, in main
+    cache_dir=args.cache_dir if args.cache_dir else None,
+  File "/home/015861469/DNABERT-genome-classification/src/transformers/configuration_utils.py", line 176, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/015861469/DNABERT-genome-classification/src/transformers/configuration_utils.py", line 241, in get_config_dict
+    raise EnvironmentError(msg)
+OSError: Model name '/home/015861469/output6' was not found in model name list. We assumed '/home/015861469/output6/config.json' was a path, a model identifier, or url to a configuration file named config.json or a directory containing such a file but couldn't find any such file at this path or url.
